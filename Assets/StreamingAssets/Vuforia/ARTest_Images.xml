@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="asset_1_grayscale" size="15.000000 10.512820" />
+    <ImageTarget name="asset3" size="15.000000 10.497867" />
+    <ImageTarget name="asset2" size="15.000000 10.519203" />
+    <ImageTarget name="asset1" size="15.000000 10.512820" />
+    <ImageTarget name="flowers" size="15.000000 17.809597" />
+  </Tracking>
+</QCARConfig>
