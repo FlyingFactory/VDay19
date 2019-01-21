@@ -45,20 +45,6 @@ public class PuzzleMap : IEquatable<PuzzleMap>
         return this;
     }
 
-    private PuzzleMap RotatedMap(int repititions = 1)
-    {
-        for (int i = 0; i < repititions; i++)
-        {
-            foreach (ImageTarget target in this.puzzleMap)
-            {
-                if (target.currentDirection == Direction.West)
-                    target.currentDirection = Direction.North;
-                else target.currentDirection++;
-            }
-        }
-        return this;
-    }
-
     public PuzzleMap GenerateLivePuzzleMap()
     {
         PuzzleMap livePuzzleMap = new PuzzleMap();
@@ -72,7 +58,8 @@ public class PuzzleMap : IEquatable<PuzzleMap>
                 Debug.Log("Active GO");
             }
         }
-        ImageTarget[] imageTargets = new ImageTarget[imageTargetGO.Count];
+        ImageTargetBehaviour[] imageTargets = new ImageTargetBehaviour[imageTargetGO.Count];
+        ImageTarget[] imageTargetProperties = new ImageTarget[imageTargetGO.Count];
 
         TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
 
@@ -82,17 +69,18 @@ public class PuzzleMap : IEquatable<PuzzleMap>
         {
             if (!originFound)
             {
-                imageTargets[i] = imageTargetGO[i].GetComponent<ImageTarget>();
+                imageTargets[i] = imageTargetGO[i].GetComponent<ImageTargetBehaviour>();
 
-                if (imageTargets[i].targetId == Puzzle.ORIGIN_ID)
+                if (imageTargets[i].thisImageTarget.targetId == Puzzle.ORIGIN_ID)
                 {
-                    imageTargets[i].currentDirection = Direction.North;
-                    LivePuzzle.origin = imageTargets[i];
+                    imageTargets[i].thisImageTarget.currentDirection = Direction.North;
+                    LivePuzzle.origin = imageTargets[i].thisImageTarget;
                     LivePuzzle.originObject = imageTargetGO[i];
                     LivePuzzle.SetOriginCoords();
                     i = 0;
                     originFound = true;
                     AlignToAxes(imageTargetGO);
+                    imageTargetProperties[i] = imageTargets[i].thisImageTarget;
                 }
                 else
                 {
@@ -100,16 +88,18 @@ public class PuzzleMap : IEquatable<PuzzleMap>
             }
             else if (originFound)
             {
-                imageTargets[i] = imageTargetGO[i].GetComponent<ImageTarget>();
+                imageTargets[i] = imageTargetGO[i].GetComponent<ImageTargetBehaviour>();
 
-                if (imageTargets[i].targetId != Puzzle.ORIGIN_ID)
+                if (imageTargets[i].thisImageTarget.targetId != Puzzle.ORIGIN_ID)
                 {
                     imageTargets[i].UpdateCurrentDirection();
                     imageTargets[i].SetTargetPosition();
+                    imageTargetProperties[i] = imageTargets[i].thisImageTarget;
+
                 }
             }
         }
-        livePuzzleMap.puzzleMap = imageTargets.ToList();
+        livePuzzleMap.puzzleMap = imageTargetProperties.ToList();
         return livePuzzleMap;
     }
 
