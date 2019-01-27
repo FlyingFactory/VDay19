@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class PuzzleMap : IEquatable<PuzzleMap>
+public class PuzzleMap : IEquatable<PuzzleMap>, IEnumerable
 {
     public List<ImageTarget> puzzleMap;
+    public List<GameObject> imgTargetGO;
 
     public PuzzleMap()
     {
@@ -24,8 +25,20 @@ public class PuzzleMap : IEquatable<PuzzleMap>
         for (int i = 0; i < otherMap.puzzleMap.Count; i++)
         {
             if (!this.puzzleMap.Contains(otherMap.puzzleMap[i])) return false;
+            else imgTargetGO[i].GetComponent<ImgTargetBehaviour>().thisImageTarget.ropeOrder
+                = otherMap.puzzleMap[i].ropeOrder;
         }
         return true;
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return (IEnumerator) GetEnumerator();
+    }
+
+    public PuzzleMapEnum GetEnumerator()
+    {
+        return new PuzzleMapEnum(imgTargetGO);
     }
 
     public PuzzleMap SortedPuzzle ()
@@ -55,13 +68,12 @@ public class PuzzleMap : IEquatable<PuzzleMap>
             if ((int)currentImageTargetGO.GetComponent<TrackableBehaviour>().CurrentStatus > 2)
             {
                 imageTargetGO.Add(currentImageTargetGO);
-                Debug.Log("Active GO");
             }
         }
-        ImageTargetBehaviour[] imageTargets = new ImageTargetBehaviour[imageTargetGO.Count];
+        ImgTargetBehaviour[] imageTargets = new ImgTargetBehaviour[imageTargetGO.Count];
         ImageTarget[] imageTargetProperties = new ImageTarget[imageTargetGO.Count];
 
-        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        //TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
 
         bool originFound = false;
 
@@ -69,7 +81,7 @@ public class PuzzleMap : IEquatable<PuzzleMap>
         {
             if (!originFound)
             {
-                imageTargets[i] = imageTargetGO[i].GetComponent<ImageTargetBehaviour>();
+                imageTargets[i] = imageTargetGO[i].GetComponent<ImgTargetBehaviour>();
 
                 if (imageTargets[i].thisImageTarget.targetId == Puzzle.ORIGIN_ID)
                 {
@@ -88,7 +100,7 @@ public class PuzzleMap : IEquatable<PuzzleMap>
             }
             else if (originFound)
             {
-                imageTargets[i] = imageTargetGO[i].GetComponent<ImageTargetBehaviour>();
+                imageTargets[i] = imageTargetGO[i].GetComponent<ImgTargetBehaviour>();
 
                 if (imageTargets[i].thisImageTarget.targetId != Puzzle.ORIGIN_ID)
                 {
@@ -100,6 +112,7 @@ public class PuzzleMap : IEquatable<PuzzleMap>
             }
         }
         livePuzzleMap.puzzleMap = imageTargetProperties.ToList();
+        livePuzzleMap.imgTargetGO = imageTargetGO;
         return livePuzzleMap;
     }
 
@@ -135,4 +148,43 @@ public class PuzzleMap : IEquatable<PuzzleMap>
         Debug.Log(LivePuzzle.originObject.transform.eulerAngles.z);
     }
 
+}
+
+public class PuzzleMapEnum : IEnumerator
+{
+    public List<GameObject> imgTargetGO;
+    int position = -1;
+    
+    public PuzzleMapEnum(List<GameObject> imgTargetGO)
+    {
+        this.imgTargetGO = imgTargetGO;
+    }
+
+    public bool MoveNext()
+    {
+        position++;
+        return (position < imgTargetGO.Count);
+    }
+
+    public void Reset() { position = -1; }
+
+    object IEnumerator.Current
+    {
+        get { return Current; }
+    }
+
+    public GameObject Current
+    {
+        get
+        {
+            try
+            {
+                return imgTargetGO[position];
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new InvalidOperationException();
+            }
+        }
+    }
 }

@@ -11,8 +11,8 @@ public sealed class Puzzle_1 : Puzzle
     {
         ORIGIN_ID = "0552";
         puzzle_1_Map = new PuzzleMap(new List<ImageTarget>()
-        { new ImageTarget(ORIGIN_ID, Direction.North, 0, 0),
-          new ImageTarget("0557", Direction.North, 1, 0)
+        { new ImageTarget(ORIGIN_ID, Direction.North, 0, 0, 1),
+          new ImageTarget("0557", Direction.North, 1, 0, 2)
         });
 
         puzzleMap = puzzle_1_Map;

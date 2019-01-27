@@ -11,19 +11,22 @@ public struct ImageTarget : IEquatable<ImageTarget>
     public string targetId;
     public Direction currentDirection;
     public TargetPosition currentTargetPosition;
+    public int ropeOrder;
 
     public ImageTarget(string targetId)
     {
         this.targetId = targetId;
         this.currentDirection = Direction.North;
         this.currentTargetPosition = new TargetPosition(0, 0);
+        this.ropeOrder = 0;
     }
 
-    public ImageTarget(string targetId, Direction currentDirection, int x_coord, int y_coord)
+    public ImageTarget(string targetId, Direction currentDirection, int x_coord, int y_coord, int ropeOrder = 0)
     {
         this.targetId = targetId;
         this.currentDirection = currentDirection;
         this.currentTargetPosition = new TargetPosition(x_coord, y_coord);
+        this.ropeOrder = ropeOrder;
     }
 
     public bool Equals(ImageTarget otherTarget)
@@ -32,7 +35,10 @@ public struct ImageTarget : IEquatable<ImageTarget>
             && this.currentDirection == otherTarget.currentDirection
             && this.currentTargetPosition.xCoord == otherTarget.currentTargetPosition.xCoord
             && this.currentTargetPosition.zCoord == otherTarget.currentTargetPosition.zCoord)
-        { Debug.Log("equals"); return true; }
+        {
+            this.ropeOrder = otherTarget.ropeOrder;
+            return true;
+        }
         else return false;
     }
 

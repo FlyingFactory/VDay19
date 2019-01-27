@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImageTargetBehaviour : MonoBehaviour
+public class ImgTargetBehaviour : MonoBehaviour
 {
     private static readonly float TARGET_SIZE = 5.0f;
     public string targetId;
@@ -46,14 +46,9 @@ public class ImageTargetBehaviour : MonoBehaviour
     {
         float xdiff = this.transform.position.x;
         float zdiff = this.transform.position.z;
-        Debug.Log("xdiff: " + xdiff);
-        Debug.Log("zdiff: " + zdiff);
+
 
         thisImageTarget.currentTargetPosition.xCoord = Mathf.RoundToInt(xdiff/TARGET_SIZE);
         thisImageTarget.currentTargetPosition.zCoord = Mathf.RoundToInt(zdiff/TARGET_SIZE);
-
-        Debug.Log("xcoord: " + thisImageTarget.currentTargetPosition.xCoord);
-        Debug.Log("zcoord: " + thisImageTarget.currentTargetPosition.zCoord);
-
     }
 }

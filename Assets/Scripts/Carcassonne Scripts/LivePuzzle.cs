@@ -13,8 +13,14 @@ public class LivePuzzle : MonoBehaviour
     public static GameObject originObject;
     public bool button1 = false;
     public static LivePuzzle current;
-    private AudioSource music;
-    public AudioClip victoryClip;
+    private static AudioSource music;
+    [SerializeField] private AudioClip victoryClip;
+    [SerializeField] private GameObject conditionObject;
+
+    public static bool puzzleSolved;
+    public GameObject spark;
+
+    public static List<GameObject> ropeGO;
 
     private void Awake()
     {
@@ -26,23 +32,31 @@ public class LivePuzzle : MonoBehaviour
     {
         music = GetComponent<AudioSource>();
         InitialisePuzzleMap();
+        puzzleSolved = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (button1) // Replace with proper condition (e.g. button press)
+        if ((button1 || DetectCondition()) && !puzzleSolved) // Replace with proper condition (e.g. button press)
         {
             livePuzzleMap = new PuzzleMap().GenerateLivePuzzleMap();
             CheckPuzzle();
 
             // temp
-            TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
+            //TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
             button1 = false;
         }
     }
 
-    private void InitialisePuzzleMap()
+    private bool DetectCondition()
+    {
+        if (conditionObject == null) return false;
+        else if ((int)conditionObject.GetComponent<TrackableBehaviour>().CurrentStatus > 2) return true;
+        else return false;
+    }
+
+    private static void InitialisePuzzleMap()
     {
         origin = Puzzle.origin;
 
@@ -65,12 +79,30 @@ public class LivePuzzle : MonoBehaviour
             Debug.Log("Puzzle is finished");
             music.clip = victoryClip;
             music.Play();
+            puzzleSolved = true;
+            LightRope(spark);
         }
         else
         {
             // Insert failure
             Debug.Log("Puzzle does not match");
         }
+    }
+
+    private static void LightRope(GameObject spark)
+    {
+        ropeGO = new List<GameObject>();
+
+        foreach (GameObject currentGO in livePuzzleMap)
+        {
+            Debug.Log(currentGO.GetComponent<ImgTargetBehaviour>().thisImageTarget.ropeOrder);
+            if (currentGO.GetComponent<ImgTargetBehaviour>().thisImageTarget.ropeOrder > 0)
+            {
+                ropeGO.Add(currentGO);
+            }
+        }
+
+        spark.SetActive(true);
     }
 
 }
