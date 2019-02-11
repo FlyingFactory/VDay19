@@ -16,9 +16,16 @@ public class LivePuzzle : MonoBehaviour
     private static AudioSource music;
     [SerializeField] private AudioClip victoryClip;
     [SerializeField] private GameObject conditionObject;
+    private static int currentPlayer;
 
     public static bool puzzleSolved;
     public GameObject spark;
+
+    private static List<GameObject> imageTargetGOs;
+    private static GameObject answerGO;
+
+    [SerializeField] private GameObject player1GO;
+    [SerializeField] private GameObject player2GO;
 
     public static List<GameObject> ropeGO;
 
@@ -33,12 +40,30 @@ public class LivePuzzle : MonoBehaviour
         music = GetComponent<AudioSource>();
         InitialisePuzzleMap();
         puzzleSolved = false;
+        GetImageTargets();
     }
+
+    private bool playerChosen = false;
 
     // Update is called once per frame
     void Update()
     {
-        if ((button1 || DetectCondition()) && !puzzleSolved) // Replace with proper condition (e.g. button press)
+        if (!playerChosen)
+        {
+            if ((int)player1GO.GetComponent<TrackableBehaviour>().CurrentStatus > 2)
+            {
+                InitialisePlayer1();
+                currentPlayer = 1;
+                playerChosen = true;
+            }
+            else if ((int)player2GO.GetComponent<TrackableBehaviour>().CurrentStatus > 2)
+            {
+                InitialisePlayer2();
+                currentPlayer = 2;
+                playerChosen = true;
+            }
+        }
+        else if ((button1 || DetectCondition()) && !puzzleSolved) // Replace with proper condition (e.g. button press)
         {
             livePuzzleMap = new PuzzleMap().GenerateLivePuzzleMap();
             CheckPuzzle();
@@ -49,17 +74,73 @@ public class LivePuzzle : MonoBehaviour
         }
     }
 
+    private void GetImageTargets()
+    {
+        imageTargetGOs = new List<GameObject>();
+        for (int i = 0; i < this.transform.childCount; i++)
+        {
+            if (this.transform.GetChild(i).GetComponent<ImgTargetBehaviour>() != null)
+            {
+                if (this.transform.GetChild(i).GetComponent<ImgTargetBehaviour>().targetId.Equals("0647"))
+                {
+                    answerGO = this.transform.GetChild(i).gameObject;
+                }
+                else
+                {
+                    imageTargetGOs.Add(this.transform.GetChild(i).gameObject);
+                }
+
+                for (int j = 0; j < this.transform.GetChild(i).childCount; j++)
+                {
+                    this.transform.GetChild(i).GetChild(j).gameObject.SetActive(false);
+                }
+            }
+        }
+    }
+
+    bool alreadyChecked = false;
+
     private bool DetectCondition()
     {
         if (conditionObject == null) return false;
-        else if ((int)conditionObject.GetComponent<TrackableBehaviour>().CurrentStatus > 2) return true;
-        else return false;
+        else if ((int)conditionObject.GetComponent<TrackableBehaviour>().CurrentStatus > 2
+            && !alreadyChecked)
+        {
+            alreadyChecked = true;
+            return true;
+        }
+        else
+        {
+            alreadyChecked = false;
+            return false;
+        }
     }
 
     private static void InitialisePuzzleMap()
     {
         origin = Puzzle.origin;
 
+    }
+
+    private static void InitialisePlayer1()
+    {
+        Debug.Log("initialising player 1");
+        foreach (GameObject gobject in imageTargetGOs)
+        {
+            for (int j = 0; j < gobject.transform.childCount; j++)
+            {
+                gobject.transform.GetChild(j).gameObject.SetActive(true);
+            }
+        }
+    }
+
+    private static void InitialisePlayer2()
+    {
+        Debug.Log("initialising player 2");
+        for (int j = 0; j < answerGO.transform.childCount; j++)
+        {
+            answerGO.transform.GetChild(j).gameObject.SetActive(true);
+        }
     }
 
     public static void SetOriginCoords()
@@ -76,11 +157,30 @@ public class LivePuzzle : MonoBehaviour
         if (livePuzzleMap.SortedPuzzle().Equals(Puzzle.puzzleMap))
         {
             // Insert victory and exit
-            Debug.Log("Puzzle is finished");
-            music.clip = victoryClip;
-            music.Play();
-            puzzleSolved = true;
-            LightRope(spark);
+            if (currentPlayer == 1)
+            {
+                Debug.Log("Puzzle is finished");
+                music.clip = victoryClip;
+                music.Play();
+                puzzleSolved = true;
+                LightRope(spark);
+            } else if (currentPlayer == 2)
+            {
+                Debug.Log("Puzzle is finished");
+                music.clip = victoryClip;
+                music.Play();
+                puzzleSolved = true;
+                foreach (GameObject gobject in imageTargetGOs)
+                {
+                    gobject.SetActive(true);
+                    for (int j = 0; j < gobject.transform.childCount; j++)
+                    {
+                        gobject.transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                }
+
+                 LightRope(spark);
+            }
         }
         else
         {
@@ -95,7 +195,6 @@ public class LivePuzzle : MonoBehaviour
 
         foreach (GameObject currentGO in livePuzzleMap)
         {
-            Debug.Log(currentGO.GetComponent<ImgTargetBehaviour>().thisImageTarget.ropeOrder);
             if (currentGO.GetComponent<ImgTargetBehaviour>().thisImageTarget.ropeOrder > 0)
             {
                 ropeGO.Add(currentGO);

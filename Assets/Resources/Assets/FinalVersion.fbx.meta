@@ -1,0 +1,809 @@
+fileFormatVersion: 2
+guid: cb781a8ceae91504c815cb97057aa82e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: node_id10
+    100004: node_id10 1
+    100006: node_id100
+    100008: node_id100 1
+    100010: node_id103
+    100012: node_id103 1
+    100014: node_id106
+    100016: node_id106 1
+    100018: node_id109
+    100020: node_id109 1
+    100022: node_id112
+    100024: node_id112 1
+    100026: node_id115
+    100028: node_id115 1
+    100030: node_id118
+    100032: node_id118 1
+    100034: node_id121
+    100036: node_id121 1
+    100038: node_id124
+    100040: node_id124 1
+    100042: node_id127
+    100044: node_id127 1
+    100046: node_id13
+    100048: node_id13 1
+    100050: node_id130
+    100052: node_id130 1
+    100054: node_id133
+    100056: node_id133 1
+    100058: node_id133 2
+    100060: node_id137
+    100062: node_id137 1
+    100064: node_id140
+    100066: node_id140 1
+    100068: node_id143
+    100070: node_id143 1
+    100072: node_id146
+    100074: node_id146 1
+    100076: node_id149
+    100078: node_id149 1
+    100080: node_id152
+    100082: node_id152 1
+    100084: node_id155
+    100086: node_id155 1
+    100088: node_id158
+    100090: node_id16
+    100092: node_id16 1
+    100094: node_id19
+    100096: node_id19 1
+    100098: node_id22
+    100100: node_id22 1
+    100102: node_id25
+    100104: node_id25 1
+    100106: node_id28
+    100108: node_id28 1
+    100110: node_id31
+    100112: node_id31 1
+    100114: node_id34
+    100116: node_id34 1
+    100118: node_id37
+    100120: node_id37 1
+    100122: node_id4
+    100124: node_id4 1
+    100126: node_id40
+    100128: node_id40 1
+    100130: node_id43
+    100132: node_id43 1
+    100134: node_id46
+    100136: node_id46 1
+    100138: node_id49
+    100140: node_id49 1
+    100142: node_id52
+    100144: node_id52 1
+    100146: node_id55
+    100148: node_id55 1
+    100150: node_id58
+    100152: node_id58 1
+    100154: node_id61
+    100156: node_id61 1
+    100158: node_id64
+    100160: node_id64 1
+    100162: node_id67
+    100164: node_id67 1
+    100166: node_id7
+    100168: node_id7 1
+    100170: node_id70
+    100172: node_id70 1
+    100174: node_id73
+    100176: node_id73 1
+    100178: node_id76
+    100180: node_id76 1
+    100182: node_id79
+    100184: node_id79 1
+    100186: node_id82
+    100188: node_id82 1
+    100190: node_id85
+    100192: node_id85 1
+    100194: node_id88
+    100196: node_id88 1
+    100198: node_id91
+    100200: node_id91 1
+    100202: node_id94
+    100204: node_id94 1
+    100206: node_id97
+    100208: node_id97 1
+    400000: //RootNode
+    400002: node_id10
+    400004: node_id10 1
+    400006: node_id100
+    400008: node_id100 1
+    400010: node_id103
+    400012: node_id103 1
+    400014: node_id106
+    400016: node_id106 1
+    400018: node_id109
+    400020: node_id109 1
+    400022: node_id112
+    400024: node_id112 1
+    400026: node_id115
+    400028: node_id115 1
+    400030: node_id118
+    400032: node_id118 1
+    400034: node_id121
+    400036: node_id121 1
+    400038: node_id124
+    400040: node_id124 1
+    400042: node_id127
+    400044: node_id127 1
+    400046: node_id13
+    400048: node_id13 1
+    400050: node_id130
+    400052: node_id130 1
+    400054: node_id133
+    400056: node_id133 1
+    400058: node_id133 2
+    400060: node_id137
+    400062: node_id137 1
+    400064: node_id140
+    400066: node_id140 1
+    400068: node_id143
+    400070: node_id143 1
+    400072: node_id146
+    400074: node_id146 1
+    400076: node_id149
+    400078: node_id149 1
+    400080: node_id152
+    400082: node_id152 1
+    400084: node_id155
+    400086: node_id155 1
+    400088: node_id158
+    400090: node_id16
+    400092: node_id16 1
+    400094: node_id19
+    400096: node_id19 1
+    400098: node_id22
+    400100: node_id22 1
+    400102: node_id25
+    400104: node_id25 1
+    400106: node_id28
+    400108: node_id28 1
+    400110: node_id31
+    400112: node_id31 1
+    400114: node_id34
+    400116: node_id34 1
+    400118: node_id37
+    400120: node_id37 1
+    400122: node_id4
+    400124: node_id4 1
+    400126: node_id40
+    400128: node_id40 1
+    400130: node_id43
+    400132: node_id43 1
+    400134: node_id46
+    400136: node_id46 1
+    400138: node_id49
+    400140: node_id49 1
+    400142: node_id52
+    400144: node_id52 1
+    400146: node_id55
+    400148: node_id55 1
+    400150: node_id58
+    400152: node_id58 1
+    400154: node_id61
+    400156: node_id61 1
+    400158: node_id64
+    400160: node_id64 1
+    400162: node_id67
+    400164: node_id67 1
+    400166: node_id7
+    400168: node_id7 1
+    400170: node_id70
+    400172: node_id70 1
+    400174: node_id73
+    400176: node_id73 1
+    400178: node_id76
+    400180: node_id76 1
+    400182: node_id79
+    400184: node_id79 1
+    400186: node_id82
+    400188: node_id82 1
+    400190: node_id85
+    400192: node_id85 1
+    400194: node_id88
+    400196: node_id88 1
+    400198: node_id91
+    400200: node_id91 1
+    400202: node_id94
+    400204: node_id94 1
+    400206: node_id97
+    400208: node_id97 1
+    2100000: Material_33
+    2100002: Material_34
+    2100004: Material_35
+    2100006: Material_36
+    2100008: Material_37
+    2100010: Material_38
+    2100012: Material_39
+    2100014: Material_40
+    2100016: Material_41
+    2100018: Material_42
+    2100020: Material_43
+    2100022: Material_44
+    2100024: Material_45
+    2100026: Material_46
+    2100028: Material_47
+    2100030: Material_48
+    2100032: Material_49
+    2100034: Material_50
+    2100036: Material_51
+    2100038: Material_52
+    2100040: Material_53
+    2100042: Material_54
+    2100044: Material_55
+    2100046: Material_56
+    2100048: Material_57
+    2100050: Material_58
+    2100052: Material_59
+    2100054: Material_60
+    2100056: Material_61
+    2100058: Material_62
+    2100060: Material_63
+    2100062: Material_64
+    2100064: Material_65
+    2100066: Material_66
+    2100068: Material_67
+    2100070: Material_68
+    2100072: Material_69
+    2100074: Material_70
+    2100076: Material_71
+    2100078: Material_72
+    2100080: Material_73
+    2100082: Material_74
+    2100084: Material_75
+    2100086: Material_76
+    2100088: Material_77
+    2100090: Material_78
+    2100092: Material_79
+    2100094: Material_80
+    2100096: Material_81
+    2100098: Material_82
+    2100100: Material_83
+    2100102: Material_84
+    2100104: Material_85
+    2100106: Material_86
+    2100108: Material_87
+    2100110: Material_88
+    2100112: Material_89
+    2100114: Material_90
+    2100116: Material_91
+    2100118: Material_92
+    2100120: Material_93
+    2100122: Material_94
+    2100124: Material_95
+    2100126: Material_96
+    2100128: Material_97
+    2100130: Material_98
+    2100132: Material_99
+    2100134: Material_100
+    2100136: Material_101
+    2100138: Material_102
+    2100140: Material_103
+    2100142: Material_104
+    2100144: Material_105
+    2100146: Material_106
+    2100148: Material_107
+    2100150: Material_108
+    2100152: Material_109
+    2100154: Material_110
+    2100156: Material_111
+    2100158: Material_112
+    2100160: Material_113
+    2100162: Material_114
+    2100164: Material_115
+    2100166: Material_116
+    2100168: Material_117
+    2100170: Material_118
+    2100172: Material_119
+    2100174: Material_120
+    2100176: Material_121
+    2100178: Material_122
+    2100180: Material_123
+    2100182: Material_124
+    2100184: Material_125
+    2100186: Material_126
+    2100188: Material_127
+    2100190: Material_128
+    2100192: Material_129
+    2100194: Material_130
+    2100196: Material_131
+    2100198: Material_132
+    2100200: Material_133
+    2100202: Material_134
+    2100204: Material_135
+    2300000: node_id10
+    2300002: node_id10 1
+    2300004: node_id100
+    2300006: node_id100 1
+    2300008: node_id103
+    2300010: node_id103 1
+    2300012: node_id106
+    2300014: node_id106 1
+    2300016: node_id109
+    2300018: node_id109 1
+    2300020: node_id112
+    2300022: node_id112 1
+    2300024: node_id115
+    2300026: node_id115 1
+    2300028: node_id118
+    2300030: node_id118 1
+    2300032: node_id121
+    2300034: node_id121 1
+    2300036: node_id124
+    2300038: node_id124 1
+    2300040: node_id127
+    2300042: node_id127 1
+    2300044: node_id13
+    2300046: node_id13 1
+    2300048: node_id130
+    2300050: node_id130 1
+    2300052: node_id133
+    2300054: node_id133 1
+    2300056: node_id133 2
+    2300058: node_id137
+    2300060: node_id137 1
+    2300062: node_id140
+    2300064: node_id140 1
+    2300066: node_id143
+    2300068: node_id143 1
+    2300070: node_id146
+    2300072: node_id146 1
+    2300074: node_id149
+    2300076: node_id149 1
+    2300078: node_id152
+    2300080: node_id152 1
+    2300082: node_id155
+    2300084: node_id155 1
+    2300086: node_id16
+    2300088: node_id16 1
+    2300090: node_id19
+    2300092: node_id19 1
+    2300094: node_id22
+    2300096: node_id22 1
+    2300098: node_id25
+    2300100: node_id25 1
+    2300102: node_id28
+    2300104: node_id28 1
+    2300106: node_id31
+    2300108: node_id31 1
+    2300110: node_id34
+    2300112: node_id34 1
+    2300114: node_id37
+    2300116: node_id37 1
+    2300118: node_id4
+    2300120: node_id4 1
+    2300122: node_id40
+    2300124: node_id40 1
+    2300126: node_id43
+    2300128: node_id43 1
+    2300130: node_id46
+    2300132: node_id46 1
+    2300134: node_id49
+    2300136: node_id49 1
+    2300138: node_id52
+    2300140: node_id52 1
+    2300142: node_id55
+    2300144: node_id55 1
+    2300146: node_id58
+    2300148: node_id58 1
+    2300150: node_id61
+    2300152: node_id61 1
+    2300154: node_id64
+    2300156: node_id64 1
+    2300158: node_id67
+    2300160: node_id67 1
+    2300162: node_id7
+    2300164: node_id7 1
+    2300166: node_id70
+    2300168: node_id70 1
+    2300170: node_id73
+    2300172: node_id73 1
+    2300174: node_id76
+    2300176: node_id76 1
+    2300178: node_id79
+    2300180: node_id79 1
+    2300182: node_id82
+    2300184: node_id82 1
+    2300186: node_id85
+    2300188: node_id85 1
+    2300190: node_id88
+    2300192: node_id88 1
+    2300194: node_id91
+    2300196: node_id91 1
+    2300198: node_id94
+    2300200: node_id94 1
+    2300202: node_id97
+    2300204: node_id97 1
+    3300000: node_id10
+    3300002: node_id10 1
+    3300004: node_id100
+    3300006: node_id100 1
+    3300008: node_id103
+    3300010: node_id103 1
+    3300012: node_id106
+    3300014: node_id106 1
+    3300016: node_id109
+    3300018: node_id109 1
+    3300020: node_id112
+    3300022: node_id112 1
+    3300024: node_id115
+    3300026: node_id115 1
+    3300028: node_id118
+    3300030: node_id118 1
+    3300032: node_id121
+    3300034: node_id121 1
+    3300036: node_id124
+    3300038: node_id124 1
+    3300040: node_id127
+    3300042: node_id127 1
+    3300044: node_id13
+    3300046: node_id13 1
+    3300048: node_id130
+    3300050: node_id130 1
+    3300052: node_id133
+    3300054: node_id133 1
+    3300056: node_id133 2
+    3300058: node_id137
+    3300060: node_id137 1
+    3300062: node_id140
+    3300064: node_id140 1
+    3300066: node_id143
+    3300068: node_id143 1
+    3300070: node_id146
+    3300072: node_id146 1
+    3300074: node_id149
+    3300076: node_id149 1
+    3300078: node_id152
+    3300080: node_id152 1
+    3300082: node_id155
+    3300084: node_id155 1
+    3300086: node_id16
+    3300088: node_id16 1
+    3300090: node_id19
+    3300092: node_id19 1
+    3300094: node_id22
+    3300096: node_id22 1
+    3300098: node_id25
+    3300100: node_id25 1
+    3300102: node_id28
+    3300104: node_id28 1
+    3300106: node_id31
+    3300108: node_id31 1
+    3300110: node_id34
+    3300112: node_id34 1
+    3300114: node_id37
+    3300116: node_id37 1
+    3300118: node_id4
+    3300120: node_id4 1
+    3300122: node_id40
+    3300124: node_id40 1
+    3300126: node_id43
+    3300128: node_id43 1
+    3300130: node_id46
+    3300132: node_id46 1
+    3300134: node_id49
+    3300136: node_id49 1
+    3300138: node_id52
+    3300140: node_id52 1
+    3300142: node_id55
+    3300144: node_id55 1
+    3300146: node_id58
+    3300148: node_id58 1
+    3300150: node_id61
+    3300152: node_id61 1
+    3300154: node_id64
+    3300156: node_id64 1
+    3300158: node_id67
+    3300160: node_id67 1
+    3300162: node_id7
+    3300164: node_id7 1
+    3300166: node_id70
+    3300168: node_id70 1
+    3300170: node_id73
+    3300172: node_id73 1
+    3300174: node_id76
+    3300176: node_id76 1
+    3300178: node_id79
+    3300180: node_id79 1
+    3300182: node_id82
+    3300184: node_id82 1
+    3300186: node_id85
+    3300188: node_id85 1
+    3300190: node_id88
+    3300192: node_id88 1
+    3300194: node_id91
+    3300196: node_id91 1
+    3300198: node_id94
+    3300200: node_id94 1
+    3300202: node_id97
+    3300204: node_id97 1
+    4300000: node_id4
+    4300002: node_id4
+    4300004: node_id7
+    4300006: node_id7
+    4300008: node_id10
+    4300010: node_id10
+    4300012: node_id13
+    4300014: node_id13
+    4300016: node_id16
+    4300018: node_id16
+    4300020: node_id19
+    4300022: node_id19
+    4300024: node_id22
+    4300026: node_id22
+    4300028: node_id25
+    4300030: node_id25
+    4300032: node_id28
+    4300034: node_id28
+    4300036: node_id31
+    4300038: node_id31
+    4300040: node_id34
+    4300042: node_id34
+    4300044: node_id37
+    4300046: node_id37
+    4300048: node_id40
+    4300050: node_id40
+    4300052: node_id43
+    4300054: node_id43
+    4300056: node_id46
+    4300058: node_id46
+    4300060: node_id49
+    4300062: node_id49
+    4300064: node_id52
+    4300066: node_id52
+    4300068: node_id55
+    4300070: node_id55
+    4300072: node_id58
+    4300074: node_id58
+    4300076: node_id61
+    4300078: node_id61
+    4300080: node_id64
+    4300082: node_id64
+    4300084: node_id67
+    4300086: node_id67
+    4300088: node_id70
+    4300090: node_id70
+    4300092: node_id73
+    4300094: node_id73
+    4300096: node_id76
+    4300098: node_id76
+    4300100: node_id79
+    4300102: node_id79
+    4300104: node_id82
+    4300106: node_id82
+    4300108: node_id85
+    4300110: node_id85
+    4300112: node_id88
+    4300114: node_id88
+    4300116: node_id91
+    4300118: node_id91
+    4300120: node_id94
+    4300122: node_id94
+    4300124: node_id97
+    4300126: node_id97
+    4300128: node_id100
+    4300130: node_id100
+    4300132: node_id103
+    4300134: node_id103
+    4300136: node_id106
+    4300138: node_id106
+    4300140: node_id109
+    4300142: node_id109
+    4300144: node_id112
+    4300146: node_id112
+    4300148: node_id115
+    4300150: node_id115
+    4300152: node_id118
+    4300154: node_id118
+    4300156: node_id121
+    4300158: node_id121
+    4300160: node_id124
+    4300162: node_id124
+    4300164: node_id127
+    4300166: node_id127
+    4300168: node_id130
+    4300170: node_id130
+    4300172: node_id133
+    4300174: node_id133
+    4300176: node_id133
+    4300178: node_id137
+    4300180: node_id137
+    4300182: node_id140
+    4300184: node_id140
+    4300186: node_id143
+    4300188: node_id143
+    4300190: node_id146
+    4300192: node_id146
+    4300194: node_id149
+    4300196: node_id149
+    4300198: node_id152
+    4300200: node_id152
+    4300202: node_id155
+    4300204: node_id155
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_100
+    second: {fileID: 2100000, guid: bf8cf9d4baf791140b95cab758b43ffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_101
+    second: {fileID: 2100000, guid: cb3bf8d799540a341929071c42157ec5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_102
+    second: {fileID: 2100000, guid: 88fca6e4d0e736a4b936f83daffb72e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_103
+    second: {fileID: 2100000, guid: 63684e7cf6bdfca4ea50ac0c7c13a4ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_104
+    second: {fileID: 2100000, guid: 88fca6e4d0e736a4b936f83daffb72e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_105
+    second: {fileID: 2100000, guid: bc9a1efbfc04a324faf4699102b4e33c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_106
+    second: {fileID: 2100000, guid: 63684e7cf6bdfca4ea50ac0c7c13a4ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_107
+    second: {fileID: 2100000, guid: 88fca6e4d0e736a4b936f83daffb72e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_108
+    second: {fileID: 2100000, guid: 63684e7cf6bdfca4ea50ac0c7c13a4ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_109
+    second: {fileID: 2100000, guid: fba870983ed15184cae7e698163b5e24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_110
+    second: {fileID: 2100000, guid: c25caa9e710bc5549a0b314dda0b40fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_111
+    second: {fileID: 2100000, guid: 7f8ae1b11d7528a4ab5573a9bb645061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_112
+    second: {fileID: 2100000, guid: b26bfbb034dac6143af56bde00fc1ce8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_113
+    second: {fileID: 2100000, guid: b26bfbb034dac6143af56bde00fc1ce8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_114
+    second: {fileID: 2100000, guid: adcb18e450eaeb44b8d16d2d02e99c6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_115
+    second: {fileID: 2100000, guid: 235f8a5e08c4cb549ad12480ad023642, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_131
+    second: {fileID: 2100000, guid: cc7f590ccd8cbb84eb089c907c26da69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_132
+    second: {fileID: 2100000, guid: 94ad8b41aa9f7c34ab6d108ffd813855, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_49
+    second: {fileID: 2100000, guid: 812384e44d7316e438eaa3ba2797cf83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_50
+    second: {fileID: 2100000, guid: 2c1857262034601488c10d3559739683, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

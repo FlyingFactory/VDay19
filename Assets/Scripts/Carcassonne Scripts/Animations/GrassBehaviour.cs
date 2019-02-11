@@ -6,17 +6,16 @@ public class GrassBehaviour : MonoBehaviour
 {
 
     private const float INTERVAL = 1.0f;
-    private const float SWAY_ANGLE = 0.4f;
+    [SerializeField] private float SWAY_ANGLE = 0.6f;
     private float startTime;
-    private enum SwayDirection { left, right };
-    private SwayDirection GrassDirection;
+    private enum SwayDirection { left, right, forward, back };
+    [SerializeField] private SwayDirection GrassDirection = SwayDirection.left;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.localEulerAngles = new Vector3(-8.0f, 0, 0);
         startTime = Time.time;
-        GrassDirection = SwayDirection.left;
     }
 
     // Update is called once per frame
@@ -27,6 +26,8 @@ public class GrassBehaviour : MonoBehaviour
         {
             if (GrassDirection == SwayDirection.left) GrassDirection = SwayDirection.right;
             else if (GrassDirection == SwayDirection.right) GrassDirection = SwayDirection.left;
+            else if (GrassDirection == SwayDirection.forward) GrassDirection = SwayDirection.back;
+            else if (GrassDirection == SwayDirection.back) GrassDirection = SwayDirection.forward;
             startTime = Time.time;
         } 
 
@@ -37,7 +38,14 @@ public class GrassBehaviour : MonoBehaviour
         else if (GrassDirection == SwayDirection.right)
         {
             transform.Rotate(Vector3.right * Mathf.SmoothStep(-SWAY_ANGLE, -SWAY_ANGLE, t));
-
+        }
+        else if (GrassDirection == SwayDirection.forward)
+        {
+            transform.Rotate(Vector3.forward * Mathf.SmoothStep(-SWAY_ANGLE, -SWAY_ANGLE, t));
+        }
+        else if (GrassDirection == SwayDirection.back)
+        {
+            transform.Rotate(Vector3.back * Mathf.SmoothStep(-SWAY_ANGLE, -SWAY_ANGLE, t));
         }
     }
 }

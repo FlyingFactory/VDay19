@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="target0677" size="5.000000 5.000000" />
+    <ImageTarget name="target0671" size="5.000000 5.000000" />
+    <ImageTarget name="target0665" size="5.000000 5.000000" />
+    <ImageTarget name="target0659" size="5.000000 5.000000" />
+    <ImageTarget name="target0657" size="5.000000 5.000000" />
+    <ImageTarget name="target0654" size="5.000000 5.000000" />
+    <ImageTarget name="target0649" size="5.000000 5.000000" />
+    <ImageTarget name="target0647" size="5.000000 5.000000" />
+    <ImageTarget name="target0642" size="5.000000 5.000000" />
+    <ImageTarget name="target0636" size="5.000000 5.000000" />
+    <ImageTarget name="target0633" size="5.000000 5.000000" />
+    <ImageTarget name="target0630" size="5.000000 5.000000" />
+    <ImageTarget name="target0626" size="5.000000 5.000000" />
+    <ImageTarget name="target0621" size="5.000000 5.000000" />
+    <ImageTarget name="target0617" size="5.000000 5.000000" />
+    <ImageTarget name="target0611" size="5.000000 5.000000" />
+    <ImageTarget name="target0607" size="5.000000 5.000000" />
+    <ImageTarget name="target0603" size="5.000000 5.000000" />
+    <ImageTarget name="target0600" size="5.000000 5.000000" />
+    <ImageTarget name="target0598" size="5.000000 5.000000" />
+    <ImageTarget name="target0595" size="5.000000 5.000000" />
+    <ImageTarget name="target0591" size="5.000000 5.000000" />
+    <ImageTarget name="target0590" size="5.000000 5.000000" />
+    <ImageTarget name="target0588" size="5.000000 5.000000" />
+    <ImageTarget name="target0584" size="5.000000 5.000000" />
+    <ImageTarget name="target0580" size="5.000000 5.000000" />
+    <ImageTarget name="target0575" size="5.000000 5.000000" />
+    <ImageTarget name="target0572" size="5.000000 5.000000" />
+    <ImageTarget name="target0569" size="5.000000 5.000000" />
     <ImageTarget name="target0692" size="5.000000 5.000000" />
     <ImageTarget name="target0687" size="5.000000 5.000000" />
     <ImageTarget name="target0681" size="5.000000 5.000000" />
