@@ -27,8 +27,8 @@ public class RocketBehaviour : MonoBehaviour
         }
 
         if (activationTime >= 10.0f) {
-            SceneManager.LoadScene("Star Map");
-            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+            SceneManager.LoadScene("SampleScene");
+            //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         }
     }
 }

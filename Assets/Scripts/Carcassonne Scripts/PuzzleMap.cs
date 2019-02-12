@@ -86,6 +86,8 @@ public class PuzzleMap : IEquatable<PuzzleMap>, IEnumerable
                 if (imageTargets[i].thisImageTarget.targetId == Puzzle.ORIGIN_ID)
                 {
                     imageTargets[i].thisImageTarget.currentDirection = Direction.North;
+                    imageTargets[i].thisImageTarget.targetId = Puzzle.ORIGIN_ID;
+                    imageTargets[i].thisImageTarget.currentTargetPosition = new TargetPosition(0, 0);
                     LivePuzzle.origin = imageTargets[i].thisImageTarget;
                     LivePuzzle.originObject = imageTargetGO[i];
                     LivePuzzle.SetOriginCoords();
@@ -102,7 +104,7 @@ public class PuzzleMap : IEquatable<PuzzleMap>, IEnumerable
             {
                 imageTargets[i] = imageTargetGO[i].GetComponent<ImgTargetBehaviour>();
 
-                if (imageTargets[i].thisImageTarget.targetId != Puzzle.ORIGIN_ID)
+                if ((imageTargets[i].thisImageTarget.targetId != Puzzle.ORIGIN_ID)||true)
                 {
                     imageTargets[i].UpdateCurrentDirection();
                     imageTargets[i].SetTargetPosition();

@@ -8,10 +8,11 @@ public class ImgTargetBehaviour : MonoBehaviour
     private static readonly float TARGET_SIZE = 5.0f;
     public string targetId;
     public ImageTarget thisImageTarget;
+    public int ropeOrder;
 
     private void Start()
     {
-        thisImageTarget = new ImageTarget(targetId);
+        thisImageTarget = new ImageTarget(targetId, ropeOrder);
 
         if (thisImageTarget.targetId == LivePuzzle.origin.targetId)
         { 
@@ -50,5 +51,9 @@ public class ImgTargetBehaviour : MonoBehaviour
 
         thisImageTarget.currentTargetPosition.xCoord = Mathf.RoundToInt(xdiff/TARGET_SIZE);
         thisImageTarget.currentTargetPosition.zCoord = Mathf.RoundToInt(zdiff/TARGET_SIZE);
+        Debug.Log("target id: " + thisImageTarget.targetId);
+        Debug.Log("x: " + this.thisImageTarget.currentTargetPosition.xCoord);
+        Debug.Log("z: " + this.thisImageTarget.currentTargetPosition.zCoord);
+        Debug.Log("direction" + this.thisImageTarget.currentDirection);
     }
 }

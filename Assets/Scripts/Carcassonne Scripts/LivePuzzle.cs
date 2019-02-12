@@ -72,6 +72,7 @@ public class LivePuzzle : MonoBehaviour
             // temp
             //TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
             button1 = false;
+            timeSinceLastChecked = 0.0f;
         }
         timeSinceLastChecked += Time.deltaTime;
     }

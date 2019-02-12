@@ -7,7 +7,7 @@ public enum Direction { North, East, South, West };
 
 public struct ImageTarget : IEquatable<ImageTarget>
 {
-    private static readonly float TARGET_SIZE = 12.0f;
+    private static readonly float TARGET_SIZE = 5.0f;
     public string targetId;
     public Direction currentDirection;
     public TargetPosition currentTargetPosition;
@@ -19,6 +19,14 @@ public struct ImageTarget : IEquatable<ImageTarget>
         this.currentDirection = Direction.North;
         this.currentTargetPosition = new TargetPosition(0, 0);
         this.ropeOrder = 0;
+    }
+
+    public ImageTarget(string targetId, int ropeOrder = 0)
+    {
+        this.targetId = targetId;
+        this.currentDirection = Direction.North;
+        this.currentTargetPosition = new TargetPosition(0, 0);
+        this.ropeOrder = ropeOrder;
     }
 
     public ImageTarget(string targetId, Direction currentDirection, int x_coord, int y_coord, int ropeOrder = 0)
@@ -37,9 +45,10 @@ public struct ImageTarget : IEquatable<ImageTarget>
             && this.currentTargetPosition.zCoord == otherTarget.currentTargetPosition.zCoord)
         {
             this.ropeOrder = otherTarget.ropeOrder;
+            Debug.Log("successful match" + this.targetId);
             return true;
         }
-        else return false;
+        else { Debug.Log(this.targetId + "does not match" + otherTarget.targetId); return false; }
     }
 
 }

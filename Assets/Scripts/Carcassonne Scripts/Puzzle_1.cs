@@ -19,14 +19,13 @@ public sealed class Puzzle_1 : Puzzle
           new ImageTarget("0636", Direction.North, 2, 3, 6),
           new ImageTarget("0642", Direction.North, 3, 3, 7),
           new ImageTarget("0621", Direction.North, 3, 2, 8),
-          new ImageTarget("0698", Direction.North, 2, 1, 9),
-          new ImageTarget("0611", Direction.North, 1, 2, 10),
-          new ImageTarget("0595", Direction.North, 1, 1, 11),
-          new ImageTarget("0580", Direction.North, 1, 0, 12),
-          new ImageTarget("0584", Direction.North, 2, 0, 13),
-          new ImageTarget("0588", Direction.North, 3, 0, 14),
-          new ImageTarget("0600", Direction.North, 3, 1, 15),
-          new ImageTarget("0617", Direction.North, 2, 2, 0),
+          new ImageTarget("0598", Direction.North, 2, 1, 9),
+          new ImageTarget("0595", Direction.North, 1, 1, 10),
+          new ImageTarget("0580", Direction.North, 1, 0, 11),
+          new ImageTarget("0584", Direction.North, 2, 0, 12),
+          new ImageTarget("0588", Direction.North, 3, 0, 13),
+          new ImageTarget("0600", Direction.North, 3, 1, 14),
+          new ImageTarget("0617", Direction.North, 2, 2, 0)
         });
 
         puzzleMap = puzzle_1_Map;
@@ -36,7 +35,7 @@ public sealed class Puzzle_1 : Puzzle
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 }

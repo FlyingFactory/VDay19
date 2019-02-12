@@ -9,7 +9,7 @@ public class SparkBehaviour : MonoBehaviour
     private static List<GameObject> ropeGO;
     private static Vector3[] ropePos;
 
-    private readonly float SPEED_FACTOR = 0.5f;
+    private readonly float SPEED_FACTOR = 5.0f;
     private int k;
     private int j;
     private float startTime;
