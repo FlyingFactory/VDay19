@@ -16,7 +16,7 @@ MonoBehaviour:
     vuforiaLicenseKey: ARnQt7r/////AAABmdbHwCPAO09orgAkj8Z97ewdNFUQeZ5ymEXn4YeJ1Hz5z4jd6cTdTejs3426iBL3e76K2pGb1GSbBL2sbBvTO/28EEkp9YdTgPpsZXgKjs9S44i6zWf8zgZl18dNsFF0F2+o5qMvGKPXdrcuueBLH6tqFohy5b81c4j7OSdokBY6FpiQdD3U+ubMOcnmkVPsIwbgqiLOaTAidmfvC0CLtj6Owxca7OQ3gI9l1KLOuWnL8V4LO85pA/XQAFKYhFmUZfg0ZuYl+sipV2CR6yxgMoUEk0FB/hH2k/rXGR1+rQHA2brzZowePKTRbrUyxv0Wn9Ik7HeVIdPOYUw+qswhkm7wPNkahQ6c9SUAHlS+CysS
     ufoLicenseKey: QWFLaWN2RC8vLy8vQUFBQUtHU3pnREt6NkVJeGdQdlFtVk8reW5SSzJEcnVDYmpkaXFtVTQ5cU0xQ296QmdEOG8xNUordW9xeEpzSHhja2FCMFVIQjJ4aTBxQ1pjdTdSS25CNVFsZ3FzVitkUUhwZzd5UUJYMlFJWGlXSW1tWTMvVnB3YW5lVlpabElmTExmMGtPdVpTRWZTaHVZYjcwMDIxd3JXb3F1YzZhc2xrTU5NUkdUZVJEeC9YSG4wRnpRZGVWc3BZZ0dna1JBNmxCVldZZ2JhUEpiZlVGOHNUUkl3bCtjOFVBRTJmMWVXM3g2OEMzaWFBa3JuQlJzeWVHK1ZBTU9Ca000TGZESFNiYzdtWlRxbk9CMjFrVlh6Y3VPMEZZYk00NExKeWwvcXNZMDF2R3BOYXVBLzRDQjFuK1FZdnA5bVVMUEpRSG9mbmlpYzlLenZ0eVgwSkxLMzBORTIxbnIzSFVRTVVuRDVwOURJb1ZwWVVNOFhKck8=
     delayedInitialization: 0
-    cameraDeviceModeSetting: -1
+    cameraDeviceModeSetting: -3
     maxSimultaneousImageTargets: 50
     maxSimultaneousObjectTargets: 50
     useDelayedLoadingObjectTargets: 0
@@ -27,16 +27,16 @@ MonoBehaviour:
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
-    eyewearType: 0
+    eyewearType: 2
     stereoFramework: 0
     seeThroughConfiguration: 0
-    viewerName: 
-    viewerManufacturer: 
+    viewerName: VR Goggles
+    viewerManufacturer: Merge
     useCustomViewer: 0
     customViewer:
       Version: 0
-      Name: 
-      Manufacturer: 
+      Name: dasd
+      Manufacturer: asd
       ButtonType: 0
       ScreenToLensDistance: 0
       InterLensDistance: 0
