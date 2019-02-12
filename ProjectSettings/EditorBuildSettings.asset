@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: bdbcc78140431bd4f98fc86f4509b62c
   - enabled: 0
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Carcasonne.unity
     guid: 38d71b85ea73c5646b5be6a71073c6b7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Carcasonne 4x4.unity
     guid: 6a2b88c0087e65c47ab045677ad713c6
   m_configObjects: {}
