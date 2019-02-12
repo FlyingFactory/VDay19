@@ -56,12 +56,16 @@ public class LivePuzzle : MonoBehaviour
                 InitialisePlayer1();
                 currentPlayer = 1;
                 playerChosen = true;
+                music.clip = victoryClip;
+                music.Play();
             }
             else if ((int)player2GO.GetComponent<TrackableBehaviour>().CurrentStatus > 2)
             {
                 InitialisePlayer2();
                 currentPlayer = 2;
                 playerChosen = true;
+                music.clip = victoryClip;
+                music.Play();
             }
         }
         else if ((button1 || DetectCondition()) && !puzzleSolved && (timeSinceLastChecked >= 6.0f)) // Replace with proper condition (e.g. button press)
