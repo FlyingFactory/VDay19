@@ -2,7 +2,7 @@ Android
 PlayerPath?
 C:/Users/Jason/Desktop/vuforiatest.apk
 SceneListBegin?
-Assets/Scenes/Carcasonne.unity
+Assets/Scenes/Carcasonne 4x4.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.BoundingBoxRenderer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Puzzle_1

@@ -7,7 +7,7 @@ public enum Direction { North, East, South, West };
 
 public struct ImageTarget : IEquatable<ImageTarget>
 {
-    private static readonly float TARGET_SIZE = 5.0f;
+    private static readonly float TARGET_SIZE = 12.0f;
     public string targetId;
     public Direction currentDirection;
     public TargetPosition currentTargetPosition;
