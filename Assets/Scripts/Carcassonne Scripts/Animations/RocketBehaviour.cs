@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RocketBehaviour : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class RocketBehaviour : MonoBehaviour
             neonHeart.transform.SetParent(this.transform);
             neonHeart.transform.localPosition = new Vector3(0, 1.0f, 0);
             neonHeart.SetActive(true);
+        }
+
+        if (activationTime >= 10.0f) {
+            SceneManager.LoadScene("Star Map");
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         }
     }
 }

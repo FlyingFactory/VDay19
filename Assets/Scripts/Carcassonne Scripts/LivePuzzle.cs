@@ -16,7 +16,7 @@ public class LivePuzzle : MonoBehaviour
     private static AudioSource music;
     [SerializeField] private AudioClip victoryClip;
     [SerializeField] private GameObject conditionObject;
-    private static int currentPlayer;
+    public static int currentPlayer;
 
     public static bool puzzleSolved;
     public GameObject spark;
@@ -44,6 +44,7 @@ public class LivePuzzle : MonoBehaviour
     }
 
     private bool playerChosen = false;
+    private float timeSinceLastChecked = 0.0f;
 
     // Update is called once per frame
     void Update()
@@ -63,7 +64,7 @@ public class LivePuzzle : MonoBehaviour
                 playerChosen = true;
             }
         }
-        else if ((button1 || DetectCondition()) && !puzzleSolved) // Replace with proper condition (e.g. button press)
+        else if ((button1 || DetectCondition()) && !puzzleSolved && (timeSinceLastChecked >= 6.0f)) // Replace with proper condition (e.g. button press)
         {
             livePuzzleMap = new PuzzleMap().GenerateLivePuzzleMap();
             CheckPuzzle();
@@ -72,6 +73,7 @@ public class LivePuzzle : MonoBehaviour
             //TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
             button1 = false;
         }
+        timeSinceLastChecked += Time.deltaTime;
     }
 
     private void GetImageTargets()
