@@ -7,18 +7,21 @@ public class RocketBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject neonHeart;
     [SerializeField] private float neonHeartDelay = 1.0f;
-    private float activationTime;
+    private float activationTime = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         this.transform.localScale = new Vector3(1, 1, 1);
-        activationTime = Time.time;
     }
 
+    [SerializeField] private List<GameObject> successSetActive = new List<GameObject>(1);
+
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+
+        activationTime += Time.deltaTime;
+
         if (activationTime > neonHeartDelay)
         {
             neonHeart.transform.SetParent(this.transform);
@@ -26,9 +29,9 @@ public class RocketBehaviour : MonoBehaviour
             neonHeart.SetActive(true);
         }
 
-        if (activationTime >= 10.0f) {
-            SceneManager.LoadScene("SampleScene");
-            //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        if (activationTime >= 5.0f) {
+            foreach (GameObject g in successSetActive) g.SetActive(true);
+            Destroy(this);
         }
     }
 }
