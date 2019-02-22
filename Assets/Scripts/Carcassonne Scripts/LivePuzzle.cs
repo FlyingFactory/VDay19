@@ -68,7 +68,7 @@ public class LivePuzzle : MonoBehaviour
                 music.Play();
             }
         }
-        else if ((button1 || DetectCondition()) && !puzzleSolved && (timeSinceLastChecked >= 6.0f)) // Replace with proper condition (e.g. button press)
+        else if ((button1 || DetectCondition()) && !puzzleSolved && (timeSinceLastChecked >= 1.0f)) // Replace with proper condition (e.g. button press)
         {
             livePuzzleMap = new PuzzleMap().GenerateLivePuzzleMap();
             CheckPuzzle();

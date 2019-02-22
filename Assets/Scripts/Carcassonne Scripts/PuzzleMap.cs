@@ -93,7 +93,6 @@ public class PuzzleMap : IEquatable<PuzzleMap>, IEnumerable
                     LivePuzzle.SetOriginCoords();
                     i = 0;
                     originFound = true;
-                    AlignToAxes(imageTargetGO);
                     imageTargetProperties[i] = imageTargets[i].thisImageTarget;
                 }
                 else

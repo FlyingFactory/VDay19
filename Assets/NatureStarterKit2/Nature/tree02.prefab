@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3305382}
   - component: {fileID: 2389710}
   - component: {fileID: 13687634}
+  - component: {fileID: 1081871432}
   m_Layer: 0
   m_Name: tree02
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 123896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.59, y: 0, z: 15.86}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.10351401, y: 0.10351401, z: 0.10351401}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,6 +104,20 @@ CapsuleCollider:
   m_Height: 7.6
   m_Direction: 1
   m_Center: {x: 0.07, y: 3.4, z: 0.01}
+--- !u!114 &1081871432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f963a48ff8bfc841ab0fa546cc2bbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SWAY_ANGLE: 0.1
+  GrassDirection: 0
 --- !u!21 &2117434
 Material:
   serializedVersion: 6
@@ -371,7 +386,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 399
-  materialHash: 595773c9d7c3f18ccac7e54e7f808211215482368
+  materialHash: b6e723a7d4e0ce7990179feb453b0403215482368
   root:
     _uniqueID: 1
     seed: 1234
